@@ -1,0 +1,97 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.row .image{
+    flex :1 1 45rem;
+}
+
+.row  .image img{
+    margin: 10;
+flex : 1 1 45rem;
+width: 95%;
+// padding: 10px;
+margin-left: 30px;
+}
+
+.row  .content{
+    flex : 1 1 45rem;
+}
+
+h3{
+    font-size: 50px;
+    font-weight: bolder;
+    color:black;
+    font-family: Futura;
+    text-align: center;
+    
+}
+
+h1{
+    font-size: 50px;
+    font-weight: bolder;
+    color:black;
+    font-family: Futura;
+    text-align: center;
+}
+
+p{
+    font-family: Futura;
+    text-align: center;
+    font-weight: bolder;
+    padding-right: 80px;
+    font-size: 20px;
+
+}
+
+.icons-container{
+    display: flex;
+    gap:1rem;
+    // flex-wrap: wrap;
+    padding: 1rem 0;
+    margin-top: .5rem;
+}
+
+.icons{
+    font-family:Futura;
+    font-weight: bolder;
+    background: #eee;
+    border-radius: .5rem;
+    border: 1 rem solid rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    flex: 1 1 17rem;
+   padding: 1.5rem 1rem;
+  margin-right: 15px;
+}
+
+i{
+
+color: crimson;
+font-weight: bolder;
+
+}
+
+span{
+    font-size: 1rem; 
+    color: black;
+    font-weight: bold;
+}
+
+
+
+.content h3{
+    
+    font-size: 50px;
+    font-weight: bolder;
+    color:crimson;
+    font-family: Futura;
+    text-align: center;
+    padding-right: 100px;
+    
+}

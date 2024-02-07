@@ -1,0 +1,62 @@
+<div class="banner">
+    <div class="overlay">
+        <div class="content">
+            <h1>Meals & Memories <br>
+                Are Made Here.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod harum sed, sint culpa obcaecati
+                voluptatibus molestiae ea, voluptate cumque unde eaque est earum neque tenetur architecto consequuntur
+                delectus. Exercitationem, architecto.</p>
+            <button [routerLink]="['/menu']">ORDER NOW<i class="bi bi-arrow-right"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5">
+    <h1 class="text-center" style="font-style: italic; font-weight: bold;">How To Get <span style="color:crimson"> Yummy
+            Meal</span></h1>
+    <div class="row mt-5">
+        <div class="col-lg-4 mt-2">
+            <div class="stepbox">
+                <h1>1</h1>
+                <p>Choose Your Favorite food</p>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-2">
+            <div class="stepbox">
+                <h1>2</h1>
+                <p>Free and Fast Delivery</p>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 mt-2">
+            <div class="stepbox">
+                <h1>3</h1>
+                <p>And Finally Enjoy Your Meal</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="container mt-4 mb-4">
+    <h1 class="text-center" style="font-style: italic; font-weight: bold;">Our Most<span style="color:crimson"> Popular
+      </span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let f of fooddata; index as i">
+            <div class="foodbox" *ngIf="i<=3">
+                <img [src]="f.img">
+                <h1>{{f.foodname}}</h1>
+                <h2><app-rating [ratingx]="f.rating" (to_parent)="from_child($event)"></app-rating></h2>
+                <h3>{{f.price|currency:"INR"}}</h3>
+            </div>
+
+        </div>
+    </div>
+    <a class="viewmorebtn"  [routerLink]="['/menu']">View More <i class="bi bi-arrow-right"></i></a>
+</div>

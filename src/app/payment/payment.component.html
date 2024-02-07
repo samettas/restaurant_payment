@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4" *ngFor="let satir of masalar">
+        <div class="text-center mb-3" *ngFor="let masa of satir">
+          <button class="btn btn-outline-success btn-lg my-1 cursor-pointer border-radius-custom" (click)="masaPayment(masa.numara)">
+            {{ masa.numara }}
+          </button>
+          <div [id]="'qrDiv-' + masa.numara" class="text-center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,25 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-lg-6" *ngIf="menudata">
+            <a [routerLink]="['/menu']" class="btn btn-sm btn-dark mb-3" style="font-family: Futura;">Back</a> 
+            <img [src]="menudata[0].img" width="100%">
+            <h1 class="mt-3">{{menudata[0].foodname}}</h1>
+            <p>{{menudata[0].discription}}</p>
+            <!-- <h2><app-rating [ratingx]="menudata.rating" (to_parent)="from_child($event)"></app-rating></h2> -->
+            <p>{{menudata[0].price|currency:"INR"}}</p>
+        </div>
+
+        <div class="col-lg-6">
+            <h1>Enter  Details</h1>
+            <form (ngSubmit)="collect_order_data()" #entire_form="ngForm" >
+                <input type="text" class="form-control" name="name" placeholder="Enter Your Name"  [(ngModel)]="orderModel.name">   &nbsp;
+                <input type="text"class="form-control" name="number" placeholder="Enter Your Number"[(ngModel)]="orderModel.number" >   &nbsp;
+                <textarea class="form-control" placeholder="Enter Address"[(ngModel)]="orderModel.address"></textarea>   &nbsp;
+                <button class="btn btn-md btn-dark mt-3" style="font-family: Futura;" [routerLink]="['/menu']">Place Order</button>    &nbsp;              
+
+
+
+            </form>
+        </div>
+    </div>
+</div>

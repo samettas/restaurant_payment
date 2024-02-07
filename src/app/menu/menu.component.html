@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="div container mt-2 mb-2">
+    <div class="row">
+        <div class="col-lg-4 mt-3" *ngFor="let fd of fooddata">
+            <div class="foodbox mt-3 mb-3">
+                <img [src]="fd.img" alt="">
+                <h1>{{fd.foodname}}</h1>
+                <p>{{fd.discription}}</p>
+                <h2><app-rating [ratingx]="fd.rating" (to_parent)="from_child($event)"></app-rating></h2>
+                <p>{{fd.price|currency:"INR"}}</p>
+                <!-- <br/> -->
+                <a class="buybtn" [routerLink]="['/menupage', fd.id]">Order Now &nbsp;</a> 
+                &nbsp;
+                <a class="btn " ><i class="bi bi-bag-heart-fill"></i></a>
+                             
+             </div>
+        </div>
+    </div>
+</div>
+
+<!-- <i class="bi bi-bag-fill"></i> -->
